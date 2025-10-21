@@ -10,7 +10,7 @@ import http from 'k6/http';
  * @returns {http.Response} - Response object returned by k6.
  */
 export function request(method, url, params = {}, body = null) {
-  const requestParams = params ?? {};
+  const requestParams = params === undefined || params === null ? {} : params;
   return http.request(method, url, body, requestParams);
 }
 
