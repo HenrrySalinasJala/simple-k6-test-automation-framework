@@ -1,0 +1,19 @@
+name: k6 Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  k6:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run k6 tests
+        uses: grafana/k6-action@v0.2.0
+        with:
+          filename: tests/hoppscotch.test.js
