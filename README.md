@@ -18,3 +18,12 @@ k6 run tests/hoppscotch.test.js
 ```
 
 Any threshold violations will cause k6 to return a non-zero exit code, which also causes the CI workflow to fail.
+
+## Next steps
+
+- This is the basic, simple k6 automation framework.
+- Webpack and additional libraries would be needed to extend capabilities.
+- Report robustness would also need additional changes.
+- Integration with Grafana for cloud monitoring would also be needed eventually.
+
+The framework itself is the foundation for a scalable performance framework.
